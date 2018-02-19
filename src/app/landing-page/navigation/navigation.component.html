@@ -1,0 +1,42 @@
+<nav class="navbar is-teal">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="https://bulma.io">
+      <img src="https://bulma.io/images/bulma-logo.png" alt="Bulma: a modern CSS framework based on Flexbox" width="112" height="28">
+    </a>
+    <div class="navbar-burger burger" (click)="navbar_toggle = !navbar_toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+
+  <div id="navbarExampleTransparentExample" class="navbar-menu" [ngClass]="{ 'is-active': navbar_toggle }">
+    <div class="navbar-start">
+      <a (click)="navbar_toggle = !navbar_toggle" routerLink="/" class="navbar-item" >
+        Home
+      </a>
+      <a (click)="navbar_toggle = !navbar_toggle" routerLink="/features" class="navbar-item" >
+        Features
+      </a>
+    </div>
+
+    <div class="navbar-end">
+      <div class="navbar-item">
+        <div class="field is-grouped">
+          <p class="control">
+            <a class="bd-tw-button button" (click)="navbar_toggle = !navbar_toggle" routerLink="/login">
+              <span>
+                Login
+              </span>
+            </a>
+          </p>
+          <p class="control">
+            <a class="button is-teal" (click)="navbar_toggle = !navbar_toggle" routerLink="/register">
+              <span>Register</span>
+            </a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
